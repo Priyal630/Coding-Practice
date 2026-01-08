@@ -1,0 +1,14 @@
+static String compress(String s) {
+    String res = "";
+    int count = 1;
+    for (int i = 1; i < s.length(); i++) {
+        if (s.charAt(i) == s.charAt(i - 1))
+            count++;
+        else {
+            res = res + s.charAt(i - 1) + count;
+            count = 1;
+        }
+    }
+    res = res + s.charAt(s.length() - 1) + count;
+    return res;
+}
