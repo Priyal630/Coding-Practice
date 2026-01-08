@@ -1,0 +1,15 @@
+static void countAll(String s) {
+    int letters = 0, digits = 0, spaces = 0;
+    for (int i = 0; i < s.length(); i++) {
+        char ch = s.charAt(i);
+        if (ch >= '0' && ch <= '9')
+            digits++;
+        else if (ch == ' ')
+            spaces++;
+        else if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+            letters++;
+    }
+    System.out.println("Letters=" + letters);
+    System.out.println("Digits=" + digits);
+    System.out.println("Spaces=" + spaces);
+}
